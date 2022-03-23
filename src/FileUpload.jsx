@@ -62,7 +62,7 @@ const FileUpload = ({ notify }) => {
 
 	// 6. Callback from drive after upload
 	function pickerCallback(data) {
-		if (data.action == window.google.picker.Action.PICKED) {
+		if (data.action === window.google.picker.Action.PICKED) {
 			notify(true);
 			setTimeout(() => {
 				notify(false);
