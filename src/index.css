@@ -1,13 +1,65 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+.App {
+	display: flex;
+	height: 70vh;
+	justify-content: center;
+	align-items: center;
+}
+
+.upload-btn {
+	padding: 10px 20px;
+	cursor: pointer;
+	background: #ddd;
+	border: none;
+	border-radius: 4px;
+	font-size: 1rem;
+	transition: background 0.2s ease-in-out;
+}
+.upload-btn:hover {
+	background: #ccc;
+}
+.notification {
+	position: absolute;
+	top: 10px;
+	background: green;
+	color: #fff;
+	padding: 7px 20px;
+	box-shadow: 0px 3px 6px 0px rgba(96, 120, 122, 0.78);
+}
+.slide-in {
+	animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.slide-out {
+  animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes slide-left {
+	0% {
+		right: -1000px;
+	}
+	100% {
+		right: 30px;
+	}
+}
+@keyframes slide-right {
+	0% {
+		right: 30px;
+	}
+	100% {
+		right: -1000px;
+	}
 }
